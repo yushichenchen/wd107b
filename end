@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>宥辰繳作業</title>
+<script>
+    var a=0,b,c,d,t=0,g,l=1,h=100;
+    function times() {
+        a +=1 ;
+        document.getElementById("demo").innerHTML=a;
+        if(a>10)alert("不要再點了!!!我要壞掉了!!!!");
+
+    } 
+    function getRandom(x){
+        
+    b=Math.floor(Math.random()*x)+1;
+    alert("亂數設好了喔!!!");
+};
+
+    function  gass(){
+    
+    g=parseInt(document.getElementById("math").value);
+	if(g>=h || g<=l )
+		{
+			alert("要不要重新猜阿!!數字不太對ㄟ?");
+		}
+	else if( g==b)
+	{
+		alert("你答對了!!");
+	}	
+	else
+	{
+		if(g>b) h=g;
+        else l=g;
+        alert("再來!!"+l+"~"+h);
+	}
+	t+=1;
+	}
+    function tryu(){
+	alert("你猜了"+t+"次!!");
+	if(t==1)alert("你是不是作弊阿!!");
+	else if(t<=5)alert("你真棒!!");
+	else if(t<=10)alert("加油!!你可以更好!!");
+	else if(t>=20)alert("有那麼難嗎Orz");
+	else alert("弱!!!");
+    }
+</script>
+<style>
+.navbar{
+position: static;
+top: 0;
+left: 10%;
+width: 2000px;
+text-align:center;
+line-height:200px;
+font-size:40px;
+color:#000000;
+background-color:#11aeec;
+}
+.Sidebar{
+position: fixed;
+top: 0;
+left: 0;
+width: 140px;
+
+text-align:left;
+line-height:40px;
+font-size:20px;
+color:#243a75;
+
+background-color:#a6d620;
+display: block;
+
+}
+
+.body{
+position: relative;
+right: 0px;
+
+text-align:center;
+line-height:20px;
+font-size:15px;
+color:#1c4e99;
+
+background-color:#dee97c;
+float:center;
+width: 500px;
+}
+
+	</style>
+</head>
+<body>
+<div class="navbar">Mincraft</div>
+<div class="Sidebar">
+<ul>
+<li><a href="https://www.minecraft.net/zh-hant/">官方網站</a></li>
+<li><a href="https://minecraft-zh.gamepedia.com/index.php?title=Minecraft_Wiki&variant=zh-tw">Mincraft wiki</a></li>    
+</ul>
+</div>
+<center>
+<div class = "body">
+<img src="https://oyster.ignimgs.com/mediawiki/apis.ign.com/minecraft/5/52/Minecraft_logo.jpg?width=640"/>
+<table border="5">
+    <td>
+        Minecraft是一款沙盒式建造遊戲，締造者為Mojang AB創始人馬庫斯·佩爾松，其靈感源於《無盡礦工》､《矮人要塞》和《地下城守護者》。<br>
+        現首席開發者為延斯·伯根斯坦。<br>
+        玩家可以在遊戲中的三維空間裡創造和破壞林林總總的方塊，甚至在多人伺服器與單人世界中體驗不同的遊戲模式，打造精妙絕倫的建築物，創造物和藝術品。<br>
+        時至今日，Minecraft的遊戲平台已囊括了移動設備和遊戲主機。<br>
+        Minecraft著重於讓玩家去探索、交互、並且改變一個由一立方米大小的方塊動態生成的地圖。<br>
+        除了方塊以外，環境單體還包括植物、生物與物品。<br>
+        遊戲裡的各種活動包括採集礦石、與敵對生物戰鬥、合成新的方塊與收集各種在遊戲中找到的資源的工具。<br>
+        遊戲中的無限制模式讓玩家在各種多人遊戲伺服器或他們的單人模式中進行創造建築物、作品與藝術創作。<br>
+        其他功能包括邏輯運算與遠程動作的紅石電路、礦車及軌道，以及稱之為「地獄」的神秘世界。最終，可以選擇前往一個叫做「終末之界」的維度冒險，並擊敗終界龍。<br>
+    </td>
+</table>
+<table border="5">
+    <tr>
+        <td><a href="https://www.youtube.com/watch?v=hB3TVo1M9eg&list=PLBtVUsNOhEjsNq_2LeTGGzzhm-_P1Xee-">生存模式教學</a></td>
+    </tr>
+</table>
+
+<p>按按鈕有驚喜!!</p>
+
+<button type="button" onclick="times()">按按鈕</button>
+<p id="demo"></p>
+<p>這是猜數字遊戲喔!!!(1~100)</p>
+<button type="button" onclick="getRandom(100)">要先按按鈕設定數字喔</button>
+<input type="number" id = "math" value>
+
+<button type="button" onclick="gass()">猜猜</button>
+
+<button type="button" onclick="tryu()">查看結果(這遊戲沒在重置的ㄛ!)</button>
+
+<p>這<br>是<br>為<br>了<br>測<br>試<br>側<br>欄<br>會<br>跟<br>著<br>螢<br>幕<br>跑<br>!<br>!<br>!<br>! <br></p>
+</div>
+
+</center>   
+</body>
+</html> 
